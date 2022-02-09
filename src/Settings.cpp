@@ -31,11 +31,9 @@ void Settings::save()
 
   EEPROM.commit();
 
-  if (debug)
-  {
-    info();
-    Serial.println("settings saved");
-  }
+  info();
+  Serial.println("settings saved");
+
 }
 
 void Settings::info()
@@ -49,8 +47,7 @@ void Settings::info()
 
 void Settings::reset()
 {
-  if (debug)
-    Serial.print("reset settings...");
+  Serial.print("reset settings...");
 
   ssid = "dummy";
   password = "dummy";
@@ -60,8 +57,7 @@ void Settings::reset()
   ssidLen = ssid.length();
   passwordLen = password.length();
 
-  if (debug)
-    Serial.println("done");
+  Serial.println("done");
 
   save();
 }

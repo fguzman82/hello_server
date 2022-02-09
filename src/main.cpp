@@ -9,8 +9,6 @@
 #define BUTTON_LEFT 0        // btn activo en bajo
 #define LONG_PRESS_TIME 3000 // 3000 milis = 3s
 
-const bool debug = true;
-
 WebServer server(80);
 
 Settings settings;
